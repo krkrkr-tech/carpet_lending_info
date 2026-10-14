@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Өрнегімен өрілген кілем</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=PT+Sans:wght@400;700&family=Noto+Sans+KR:wght@400;500&family=Noto+Serif+KR:wght@600;700&display=swap">
+<style>
+:root{--bg:#f7f1e3;--fg:#1a1630;--card:#fffaf0;--indigo:#1d2a6b;--red:#d8402a;--gold:#f2b705;--mute:#5a5670;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14122b;--fg:#f1ead8;--card:#1d1a3b;--mute:#b4afc8;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14122b;--fg:#f1ead8;--card:#1d1a3b;--mute:#b4afc8;color-scheme:dark}
+*{box-sizing:border-box}
+:lang(ko){word-break:keep-all}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.7 "PT Sans","Noto Sans KR",system-ui,sans-serif}
+h1,h2,h3{font-family:Merriweather,"Noto Serif KR",Georgia,serif;line-height:1.2;margin:0 0 .6em}
+img{max-width:100%;display:block}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 20px;background:var(--indigo);color:#fff}
+header nav{display:flex;gap:6px;flex-wrap:wrap}
+header a{position:relative;color:#fff;text-decoration:none;font:700 15px "PT Sans","Noto Sans KR",sans-serif;padding:7px 14px 7px 27px;border-radius:999px;transition:background .2s,color .2s}
+header a::before{content:"";position:absolute;left:12px;top:50%;width:7px;height:7px;background:var(--gold);transform:translateY(-50%) rotate(45deg);transition:background .2s}
+header a:hover{background:var(--gold);color:#1a1630}
+header a:hover::before{background:var(--red)}
+.lang{display:flex;border:2px solid var(--gold);border-radius:999px;overflow:hidden;flex:none}
+.lang button{border:0;background:none;color:#fff;font:700 14px "PT Sans","Noto Sans KR",sans-serif;padding:6px 14px;cursor:pointer}
+.lang button.on{background:var(--gold);color:#1a1630}
+button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hero{position:relative;min-height:78vh;display:grid;align-items:end;color:#fff;background:var(--indigo)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,18,60,.92),rgba(20,18,60,.25) 70%)}
+.hero div{position:relative;z-index:1;max-width:900px;padding:48px 24px 56px}
+.hero h1{font-size:clamp(28px,4.8vw,50px);line-height:1.3;margin-bottom:28px}
+.btn{display:inline-block;background:var(--gold);color:#1a1630;font-weight:500;padding:12px 26px;border-radius:999px;text-decoration:none}
+.zig{height:20px;background:linear-gradient(135deg,var(--red) 25%,transparent 25%) -10px 0/20px 20px,linear-gradient(225deg,var(--red) 25%,transparent 25%) -10px 0/20px 20px,var(--gold)}
+section{max-width:1040px;margin:0 auto;padding:72px 24px}
+h2{font-size:clamp(26px,4vw,38px);color:var(--indigo)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:var(--gold)}}
+:root[data-theme="dark"] h2{color:var(--gold)}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center}
+.split figure{margin:0}
+.split img{border-radius:6px;border:6px solid var(--card);box-shadow:0 0 0 2px var(--red)}
+figcaption{font-size:14px;color:var(--mute);margin-top:12px}
+.steps,.types{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:28px}
+.steps div,.types div{background:var(--card);padding:24px;border-top:5px solid var(--red)}
+.types div{border-top-color:var(--indigo)}
+.steps b{font:700 30px Merriweather,serif;color:var(--red)}
+.steps h3,.types h3{font-size:20px;margin:.2em 0 .4em}
+.steps p,.types p{margin:0;color:var(--mute);font-size:16px}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.end{background:var(--indigo);color:#fff;text-align:center;max-width:none}
+.end>div{max-width:720px;margin:0 auto}
+.end h2{color:var(--gold)}
+blockquote{margin:32px 0 0;font:600 clamp(22px,3.4vw,32px)/1.4 Merriweather,"Noto Serif KR",serif;color:var(--gold)}
+footer{text-align:center;padding:24px;color:var(--mute);font-size:14px}
+.gen{display:block;width:100%;height:auto;border:6px solid var(--card);box-shadow:0 0 0 2px var(--red)}
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.works img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px;border:6px solid var(--card);box-shadow:0 0 0 2px var(--red)}
+@media (max-width:760px){.split,.steps,.types,.gal,.hw,.works{grid-template-columns:1fr}header nav{display:none}section{padding:52px 20px}}
+</style>
+</head>
+<body>
+<header>
+<nav><a href="#history" data-i="n1"></a><a href="#craft" data-i="n2"></a><a href="#types" data-i="n3"></a><a href="#end" data-i="n4"></a></nav>
+<div class="lang" role="group" aria-label="Тіл / Язык"><button data-l="kk" class="on">ҚАЗ</button><button data-l="ru">РУС</button><button data-l="en">ENG</button><button data-l="ko">한국어</button></div>
+</header>
+
+<div class="hero"><img src="images/hero.jpg" alt=""><div><h1 data-i="h1"></h1><a class="btn" href="#history" data-i="cta"></a></div></div>
+<div class="zig"></div>
+
+<section id="history"><div class="split"><div><h2 data-i="t1"></h2><p data-i="p1"></p><p data-i="p2"></p><p data-i="p3"></p></div>
+<figure><img src="images/history.jpg" alt="" loading="lazy"><figcaption data-i="cap1"></figcaption></figure></div></section>
+
+<section id="craft" style="padding-top:0"><h2 data-i="t2"></h2><p data-i="intro"></p>
+<div class="steps">
+<div><b>1</b><h3 data-i="s1"></h3><p data-i="s1t"></p></div>
+<div><b>2</b><h3 data-i="s2"></h3><p data-i="s2t"></p></div>
+<div><b>3</b><h3 data-i="s3"></h3><p data-i="s3t"></p></div>
+</div></section>
+
+<section id="types" style="padding-top:0"><h2 data-i="t3"></h2>
+<div class="types">
+<div><h3 data-i="k1"></h3><p data-i="k1t"></p></div>
+<div><h3 data-i="k2"></h3><p data-i="k2t"></p></div>
+<div><h3 data-i="k3"></h3><p data-i="k3t"></p></div>
+</div></section>
+
+<section style="padding-top:0"><img class="gen" src="images/carpet.jpg" alt="" loading="lazy"></section>
+
+<div class="zig"></div>
+<section id="end" class="end"><div><h2 data-i="t4"></h2><p data-i="end"></p><blockquote data-i="q"></blockquote></div></section>
+<section id="works"><h2 data-i="tw"></h2><div class="works"><img src="images/work-triangle.jpg" alt="" loading="lazy"><img src="images/work-vases.jpg" alt="" loading="lazy"><img src="images/work-owl.jpg" alt="" loading="lazy"></div></section>
+<footer>© 2026 · <span data-i="h1"></span></footer>
+
+<script>
+const T={kk:{
+n1:"Тарихы",n2:"Тоқу өнері",n3:"Түрлері",n4:"Қорытынды",
+h1:"Өрнегімен өрілген кілем — халқымыздың асыл мұрасы",sub:"Халқымыздың асыл мұрасы",cta:"Тарихымен танысу",
+t1:"Кілемнің шығу тарихы",
+p1:"Кілем тоқу — адамзаттың ежелден келе жатқан сәндік-қолданбалы өнерінің бір түрі. Ертеде адамдар кілемді үй ішін жылыту, еденге төсеу, қабырғаға ілу және киіз үйдің ішін безендіру үшін пайдаланған.",
+p2:"Қазақ халқының тұрмысында кілемнің орны ерекше болған. Кілемдер үйдің сәнін келтіріп қана қоймай, халықтың мәдениетін, дүниетанымын және ұлттық дәстүрін бейнелеген. Қазақ кілемдерінде қошқармүйіз, тұмарша, ирек және басқа да ою-өрнектер жиі кездеседі. Әрбір өрнектің өзіндік мәні бар.",
+p3:"Кілем тоқу өнері ұрпақтан ұрпаққа беріліп, бүгінгі күнге дейін жалғасып келеді. Қазіргі уақытта кілемдер дәстүрлі қолөнер бұйымы ретінде де, интерьерді безендіретін көркем туынды ретінде де бағаланады.",
+cap1:"Түрлі түсті жіптермен тоқылған, ою-өрнектері мен бейнелері үйлескен сәндік туынды.",
+t2:"Кілемді қолмен тоқу",
+intro:"Кілемді қолмен тоқу бірнеше кезеңнен тұрады. Дәстүрлі кілемдер жүннен, мақтадан және басқа да талшықтардан жасалады. Қазақ кілем тоқу өнерінде жүн кеңінен пайдаланылған.",
+s1:"Эскиз жасау",s1t:"Кілемнің өлшемі анықталып, қағазға ою-өрнек пен түстердің орналасуы сызылады.",
+s2:"Кілем тоқу",s2t:"Жіптер арнайы станокқа керіліп, көлденең жіптермен біріктіріледі. Түкті кілемде жіптер түйінделіп немесе түк түзетін тәсілмен бекітіледі.",
+s3:"Соңғы өңдеу",s3t:"Дайын кілемнің шеттерін реттеп, артық жіптерін қырқып, пішінін түзетеді.",
+t3:"Кілем тоқудың негізгі түрлері",
+k1:"Түкті кілем",k1t:"Бетінде жұмсақ түктері бар, көлемді әрі бедерлі бұйым.",
+k2:"Тықыр кілем",k2t:"Түгі жоқ, тегіс тоқылған кілем.",
+k3:"Алаша",k3t:"Түрлі түсті жолақтардан өріліп немесе тоқылып жасалатын дәстүрлі бұйым.",
+t4:"Қорытынды",tw:"Оқушылар жұмыстары",
+end:"Кілем тоқу — шыдамдылықты, шеберлікті және шығармашылықты талап ететін өнер. Әрбір кілемнің өзіндік өрнегі, түс үйлесімі мен тарихы бар. Қазақ халқының кілем тоқу дәстүрі — ұлттық мәдениетіміздің баға жетпес мұрасы.",
+q:"Өрнегімен өрілген кілем — халқымыздың асыл мұрасы."},
+ru:{
+n1:"История",n2:"Искусство ткачества",n3:"Виды",n4:"Заключение",
+h1:"Ковёр, сотканный узорами, — бесценное наследие нашего народа",sub:"Бесценное наследие нашего народа",cta:"Узнать историю",
+t1:"История происхождения ковра",
+p1:"Ткачество ковров — один из древнейших видов декоративно-прикладного искусства человечества. В старину люди использовали ковры, чтобы утеплять дом, застилать пол, вешать на стены и украшать внутреннее пространство юрты.",
+p2:"В быту казахского народа ковру отводилось особое место. Ковры не только украшали дом, но и отражали культуру, мировоззрение и национальные традиции народа. В казахских коврах часто встречаются узоры «кошкармүйіз» (бараний рог), «тұмарша» (оберег), «ирек» (извилистая линия) и другие. У каждого узора своё значение.",
+p3:"Искусство ткачества передаётся из поколения в поколение и дошло до наших дней. Сегодня ковры ценятся и как изделие традиционного ремесла, и как художественное произведение, украшающее интерьер.",
+cap1:"Декоративное произведение из разноцветных нитей, в котором сочетаются узоры и образы.",
+t2:"Ручное ткачество ковра",
+intro:"Ручное ткачество ковра состоит из нескольких этапов. Традиционные ковры делают из шерсти, хлопка и других волокон. В казахском ковроткачестве широко использовалась шерсть.",
+s1:"Создание эскиза",s1t:"Определяется размер ковра, на бумаге рисуются узор и расположение цветов.",
+s2:"Ткачество",s2t:"Нити натягиваются на специальный станок и соединяются поперечными нитями. В ворсовом ковре нити завязываются узлами или закрепляются способом, образующим ворс.",
+s3:"Окончательная обработка",s3t:"Края готового ковра выравнивают, лишние нити срезают, форму исправляют.",
+t3:"Основные виды ковров",
+k1:"Ворсовый ковёр",k1t:"Объёмное рельефное изделие с мягким ворсом на поверхности.",
+k2:"Гладкий ковёр (тықыр)",k2t:"Гладкотканый ковёр без ворса.",
+k3:"Алаша",k3t:"Традиционное изделие, сотканное или сплетённое из разноцветных полос.",
+t4:"Заключение",tw:"Работы учеников",
+end:"Ковроткачество — искусство, требующее терпения, мастерства и творчества. У каждого ковра свой узор, своё сочетание цветов и своя история. Традиция казахского ковроткачества — бесценное наследие нашей национальной культуры.",
+q:"Ковёр, сотканный узорами, — бесценное наследие нашего народа."},
+ko:{
+n1:"역사",n2:"직조 예술",n3:"종류",n4:"맺음말",
+h1:"문양으로 짜낸 카펫, 우리 민족의 소중한 유산",sub:"우리 민족의 소중한 유산",cta:"역사 알아보기",
+t1:"카펫의 기원과 역사",
+p1:"카펫 짜기는 인류가 아주 오래전부터 이어 온 장식·응용 예술의 하나입니다. 옛날 사람들은 카펫을 집 안을 따뜻하게 하고, 바닥에 깔고, 벽에 걸고, 유르트(전통 천막집) 내부를 꾸미는 데 사용했습니다.",
+p2:"카자흐 민족의 생활에서 카펫은 특별한 자리를 차지했습니다. 카펫은 집을 아름답게 꾸밀 뿐 아니라 민족의 문화와 세계관, 전통을 담아냈습니다. 카자흐 카펫에는 양뿔 무늬(қошқармүйіз), 부적 무늬(тұмарша), 물결 무늬(ирек) 같은 문양이 자주 등장합니다. 모든 문양에는 저마다의 뜻이 있습니다.",
+p3:"카펫 짜기 기술은 세대에서 세대로 전해져 오늘날까지 이어지고 있습니다. 오늘날 카펫은 전통 공예품으로, 또 인테리어를 장식하는 예술 작품으로 높이 평가받습니다.",
+cap1:"색색의 실로 짜낸, 문양과 형상이 어우러진 장식 작품.",
+t2:"수작업 카펫 직조",
+intro:"수작업 카펫 직조는 여러 단계로 이루어집니다. 전통 카펫은 양모, 면 등의 섬유로 만듭니다. 카자흐 카펫 직조 예술에서는 양모가 널리 쓰였습니다.",
+s1:"도안 그리기",s1t:"카펫의 크기를 정하고, 종이에 문양과 색의 배치를 그립니다.",
+s2:"직조",s2t:"실을 전용 틀에 팽팽히 걸고 가로실로 엮습니다. 파일(털) 카펫은 실을 매듭짓거나 털이 생기는 방식으로 고정합니다.",
+s3:"마무리 작업",s3t:"완성된 카펫의 가장자리를 정리하고 남는 실을 자르며 모양을 다듬습니다.",
+t3:"카펫의 주요 종류",
+k1:"파일(털) 카펫",k1t:"표면에 부드러운 털이 있는 도톰하고 입체적인 제품입니다.",
+k2:"평직 카펫(тықыр)",k2t:"털이 없이 평평하게 짠 카펫입니다.",
+k3:"알라샤",k3t:"여러 색의 줄무늬로 엮거나 짜서 만드는 전통 제품입니다.",
+t4:"맺음말",tw:"학생 작품",
+end:"카펫 짜기는 인내와 숙련, 창의성이 필요한 예술입니다. 카펫마다 고유한 문양과 색의 조화, 이야기가 있습니다. 카자흐 민족의 카펫 직조 전통은 우리 민족 문화의 값을 매길 수 없는 유산입니다.",
+q:"문양으로 짜낸 카펫, 우리 민족의 소중한 유산."},
+en:{
+n1:"History",n2:"The craft",n3:"Types",n4:"Conclusion",
+h1:"A carpet woven with patterns is the priceless heritage of our people",sub:"The priceless heritage of our people",cta:"Explore the history",
+t1:"The history of the carpet",
+p1:"Carpet weaving is one of humanity's oldest decorative and applied arts. In ancient times, people used carpets to keep the home warm, to cover the floor, to hang on walls and to decorate the inside of the yurt.",
+p2:"Carpets held a special place in the daily life of the Kazakh people. They did more than beautify the home: they reflected the people's culture, worldview and national traditions. Kazakh carpets often feature koshkar-muiz (ram's horn), tumarsha (amulet), irek (curved line) and other patterns. Every pattern has its own meaning.",
+p3:"The art of carpet weaving has been passed down from generation to generation and continues to this day. Today carpets are valued both as traditional handicrafts and as works of art that decorate the interior.",
+cap1:"A decorative work woven from colorful threads, where patterns and figures come together.",
+t2:"Weaving a carpet by hand",
+intro:"Weaving a carpet by hand takes several stages. Traditional carpets are made from wool, cotton and other fibers. Wool has been widely used in Kazakh carpet weaving.",
+s1:"Making the sketch",s1t:"The size of the carpet is set, and the pattern and the placement of colors are drawn on paper.",
+s2:"Weaving",s2t:"The threads are stretched on a special loom and joined with crosswise threads. In a pile carpet, the threads are knotted or fixed in a way that forms the pile.",
+s3:"Finishing",s3t:"The edges of the finished carpet are tidied, excess threads are trimmed and the shape is straightened.",
+t3:"The main types of carpets",
+k1:"Pile carpet",k1t:"A thick, textured piece with soft pile on its surface.",
+k2:"Flat-woven carpet (tyqyr)",k2t:"A smooth, flat-woven carpet with no pile.",
+k3:"Alasha",k3t:"A traditional piece woven or braided from stripes of different colors.",
+t4:"Conclusion",tw:"Student works",
+end:"Carpet weaving is an art that demands patience, skill and creativity. Every carpet has its own pattern, color harmony and story. The Kazakh tradition of carpet weaving is a priceless legacy of our national culture.",
+q:"A carpet woven with patterns is the priceless heritage of our people."}};
+function setLang(l){
+document.documentElement.lang=l;
+document.querySelectorAll("[data-i]").forEach(e=>e.textContent=T[l][e.dataset.i]);
+document.title=T[l].h1;
+document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.l===l));
+try{localStorage.setItem("lang",l)}catch(e){}
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+let s="kk";try{s=localStorage.getItem("lang")||"kk"}catch(e){}
+setLang(T[s]?s:"kk");
+</script>
+</body>
+</html>
